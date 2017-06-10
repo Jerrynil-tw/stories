@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stories</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+  <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
+  <%= favicon_link_tag 'stories-icon-apple-touch-180x180.png', rel: 'apple-touch-icon', type: 'image/png' %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class="<%= controller.controller_name %> <%= controller.action_name %>">
+  <%= render 'layouts/overlay' unless user_signed_in? %>
+  <div data-behavior="progress-bar" class="progress-bar"></div>
+  <%= render 'layouts/simple_header' %>
+  <%= render 'layouts/alert_messages' %>
+
+  <div class="container-fluid">
+    <%= yield %>
+    <%= yield :sidebar %>
+  </div> 
+
+</body>
+<script type="text/javascript">
+  window.userSignedIn = <%= user_signed_in? %>;
+</script>
+</html>

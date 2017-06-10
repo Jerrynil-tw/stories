@@ -1,0 +1,201 @@
+#notifications {
+  a.dropdown-toggle.active {
+    background-color: rgba($accent-color, 0.8);
+  }
+  a.dropdown-toggle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-top: 5px;
+    position: relative;
+    border: 1.5px solid $border-color;
+    transition: all .1s;
+    @include border-radius($round);
+    i.fa-bell-o,
+    span#new-notifications-count {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.3em;
+    }
+    #bell {
+      color: $light-font-color;
+    }
+    span#new-notifications-count {
+      color: $white;
+    }
+  }
+  a.dropdown-toggle:hover {
+    border: 1.5px solid $border-hover-color;
+  }
+}
+.notification-container {
+  .dropdown-menu {
+    width: 360px;
+    margin-top: 9px;
+  }
+  .notification-header {
+    padding: 4px 20px;
+    border-bottom: 1px solid $light-border-color;
+    color: $font-black;
+  }
+  .mark-all-as-read {
+    cursor: pointer;
+    color: $light-font-color;
+    &:hover,
+    &:active {
+      color: $accent-color;
+    }
+  }
+  .notifications-list {
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 440px;
+    list-style: none;
+    padding: 0;
+    .load-more {
+      text-align: center;
+    }
+  }
+  .dropdown-arrow-top {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    z-index: 20;
+    border-bottom: 10px solid #fff;
+    position: absolute;
+    right: 10px;
+    top: -10px;
+  }
+  .dropdown-arrow-bottom {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    z-index: 10;
+    border-bottom: 11px solid rgba(0, 0, 0, 0.11);
+    position: absolute;
+    right: 8px;
+    top: -11px;
+  }
+}
+
+.notifications-list {
+  .avatar-image {
+    margin-right: 18px;
+    vertical-align: baseline;
+  }
+  li {
+    padding: 8px 0;
+    border-bottom: 1px solid $light-border-color;
+    &.unread-notification {
+      border-left: 2px solid $accent-color;
+    }
+  }
+  li > a {
+    color: $light-font-color;
+    display: block;
+    padding: 3px 0 3px 20px;
+    clear: both;
+    white-space: nowrap;
+    font-weight: normal;
+    transition: color 200ms;
+    &:hover {
+      color: $font-black;
+    }
+  }
+  .notification-metadata {
+    display: inline-block;
+  }
+
+  .fa {
+    margin-right: 8px;
+  }
+
+  .fa-heart-o {
+    color: #e81c4f;
+  }
+
+  .fa-user {
+    color: lightblue;
+  }
+
+  .fa-commenting-o {
+    color: $light-font-color;
+  }
+}
+
+// Bell Animation for "No Notifications"
+
+  .no-notifications {
+    margin: 10px 11px 8px 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+
+    .speech-bubble {
+      border: $border-color 1px solid;
+      padding: 10px;
+      @include border-radius($radius);
+      width: 170px;
+      margin: 0 auto;
+      color: $light-font-color;
+    }
+
+    .speech-arrow-top {
+      width: 0;
+      height: 0;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      z-index: 20;
+      border-top: 10px solid #fff;
+      position: absolute;
+      right: 46.7%;
+      top: 36.5%;
+    }
+
+    .speech-arrow-bottom {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      z-index: 10;
+      border-top: 11px solid $border-color;
+      position: absolute;
+      right: 46.3%;
+      top: none;
+    }
+
+    .ringer {
+      margin: 0 auto;
+      width: 50px;
+      margin-top: 20px;
+    }
+  }
+
+  .bell-jar,.mouth,.eye{opacity:0.2;fill:$black;}
+
+  .blink, {
+    animation: blink 5s step-start 0s infinite;
+  }
+
+  @keyframes blink {
+    53% {
+      opacity: 0.2;
+    }
+    55% {
+      opacity: 0.0;
+    }
+    57% {
+      opacity: 0.2;
+    }
+    59% {
+      opacity: 0.0;
+    }
+    61% {
+      opacity: 0.2;
+    }
+  }

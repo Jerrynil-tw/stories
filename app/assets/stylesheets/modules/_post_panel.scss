@@ -1,0 +1,70 @@
+.post-panel {
+  border-bottom: 1px solid $border-color;
+  padding: 20px 0 20px;
+  &:last-child {
+    border: none;
+  }
+
+  .post-picture-wrapper {
+    padding: 1.2em 0 0;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .main-body {
+    margin-bottom: 20px;
+    .post-title a {
+      color: $font-black;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 29px;
+      letter-spacing: -.022em;
+      line-height: 1.12;
+    }
+
+    .post-body {
+      font-size: 21px;
+      line-height: 1.18;
+      letter-spacing: -.022em;
+
+      p {
+        @include well-read;
+      }
+
+      h2, h3 {
+        @include well-read;
+        font-size: 22px;
+        color: $light-gray;
+      }
+    }
+
+    .read-more {
+      display: block;
+      text-decoration: none;
+      color: $super-light-font-color;
+      font-size: 12px;
+      margin-top: 16px;
+      &:hover {
+        color: $light-font-color;
+      }
+    }
+  }
+
+  .response-count {
+    color: $super-light-font-color;
+    margin-right: 5px;
+    text-decoration: none;
+    &:hover {
+      color: $light-font-color;
+    }
+  }
+
+  [data-react-class="OverlayTriggerButton"] {
+    display: inline-block;
+    cursor: pointer;
+  }
+}
+

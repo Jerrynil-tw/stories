@@ -1,0 +1,100 @@
+.popover-link {
+  position: relative;
+}
+
+.user-popover {
+  display: block !important;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 310px;
+  padding: 18px;
+  background-color: $white;
+  @include border-radius($popover);
+  border: 1px solid $border-color;
+  color: $font-black;
+  max-height: 200px;
+  z-index: $z-popover;
+  .po-username,
+  .po-description {
+    margin: 0;
+  }
+  .up-main {
+    margin-bottom: 20px;
+  }
+  .up-metadata {
+    padding-right: 12px;
+  }
+  .po-username {
+    font-size: 18px;
+    margin-bottom: 8px;
+    a {
+      color: $font-black;
+    }
+  }
+  .po-description {
+    font-size: 14px;
+    font-weight: normal;
+    color: $light-gray;
+  }
+  .po-location {
+    margin-top: 4px;
+    font-size: 14px;
+    color: $light-gray;
+    .fa-map-marker {
+      color: tomato;
+      margin-right: 4px;
+    }
+  }
+  .po-metadata {
+    padding-top: 12px;
+    border-top: 1px solid $light-border-color;
+  }
+
+  .user-follow-container {
+    padding-top: 12px;
+    border-top: 1px solid $light-border-color;
+  }
+
+  .following-metadata {
+    margin: 0 !important;
+  }
+
+  .following-count, .follower-count {
+    color: $light-gray !important;
+    font-size: 14px !important;
+    cursor: default !important;
+  }
+  
+  .following-count {
+    margin-right: 18px;
+  }
+
+  .unfollow-button {
+    font-size: 11px;
+    width: 72px
+  }
+  .follow-button {
+    font-size: 11px;
+  }
+  .follow-button,
+  .unfollow-button {
+    top: -3px;
+  }
+}
+.po-buffer-bottom {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  bottom: 0;
+  left: 0;
+  transform: translateY(100%);
+}
+
+.po-buffer-top {
+  position: absolute;
+  width: 100%;
+  height: 15px;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+}

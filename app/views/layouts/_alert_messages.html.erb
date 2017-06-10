@@ -1,0 +1,7 @@
+<% if notice %>
+  <%= react_component('AlertMessage', { message: notice, type: 'success' }) %>
+<% end %>
+
+<% if alert %>
+  <%= react_component('AlertMessage', { message: alert, type: 'danger' }) %>
+<% end %>

@@ -1,0 +1,96 @@
+$editor-padding-left: 60px;
+
+.editor-form {
+  position: relative;
+  padding-bottom: 2em;
+  margin-top: 20px;
+
+  .editor-title {
+    font-size: 36px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    width: 100%;
+  }
+  .medium-editable {
+    min-height: 300px;
+    outline: none;
+    @include well-read;
+    line-height: 1.5;
+    position: relative;
+    left: -$editor-padding-left;
+    padding-left: $editor-padding-left;
+  }
+  .picture_upload {
+    position: absolute;
+    top: 8px;
+    left: -50px;
+    &:hover {
+      cursor: pointer;
+    }
+    &.active {
+      color: $accent-color;
+    }
+  }
+  label.picture_upload input[type="file"] {
+    position: fixed;
+    top: -1000px;
+  }
+  .file-upload-previewer,
+  .existing-img-previewer {
+    padding: 0 0 2em;
+    > img {
+      width: 100%;
+    }
+  }
+}
+
+
+
+.picture_upload {
+  border: 1px solid $light-gray;
+  @include border-radius($round);
+  margin: 2px;
+  color: $light-gray;
+  display: inline-block;
+  float: right;
+  margin-right: 8px;
+  transition: all .1s;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  .fa-camera {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.picture_upload:hover {
+  border: 1px solid $accent-color;
+  color: $accent-color;
+}
+
+// Override Taggle stylesheet.
+.taggle_list {
+  padding: 0 !important;
+  float: none !important;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.taggle_placeholder {
+  top: 3px !important;
+  left: 0px !important;
+}
+
+// Override Medium Editor Insert Plugin.
+.medium-insert-buttons {
+  a {
+    color: $light-gray;
+  }
+}
+
+.medium-editor-insert-plugin.medium-editor-placeholder:after {
+  color: $light-gray;
+  padding-left: $editor-padding-left !important;
+}

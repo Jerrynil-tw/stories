@@ -1,0 +1,25 @@
+.feed-panel {
+  background: $white;
+  padding: 0 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0,0,0, 0.09);
+  @include box-shadow;
+  @include border-radius($radius);
+}
+.feed-metadata {
+  padding-bottom: 1.4em;
+  color: $light-gray;
+  .fa-tag {
+    margin-right: 5px;
+    color: $light-gray;
+    transform: rotate(90deg);
+    font-size: 17px;
+  }
+  a {
+    color: $super-light-font-color;
+    text-decoration: none;
+    &:hover {
+      color: $light-font-color;
+    }
+  }
+}

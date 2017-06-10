@@ -1,0 +1,36 @@
+aside.main-sidebar {
+  padding-top: 2em;
+  background-color: $background-gray;
+
+  .sidebar-top-stories {
+    ul {
+      list-style: none;
+      padding: 1em;
+    }
+    .top-stories-list-item {
+      display: flex;
+      margin-bottom: 1.1em;
+    }
+    .top-stories-links {
+      padding-bottom: 1em;
+      min-width: 80%;
+      border-bottom: 1px solid $border-color;
+      .post-title {
+        color: rgba(0,0,0,0.8);
+        font-size: 14px;
+        text-decoration: none;
+        &:hover {
+          color: $accent-color;
+        }
+      }
+      .popover-link > a {
+        font-size: 13px;
+        color: $super-light-font-color;
+        text-decoration: none;
+        &:hover {
+          color: $light-font-color;
+        }
+      }
+    }
+  }
+}

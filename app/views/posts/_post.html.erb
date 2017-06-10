@@ -1,0 +1,37 @@
+<div class="post-panel">
+  <% if user_signed_in? %>
+    <%= render partial: 'posts/feed_metadata', locals: { post: PostDecorator.new(post, current_user) } %>
+  <% end %>
+
+  <%= render partial: 'posts/post_metadata', locals: { post: post } %>
+
+  <% if post.picture? %>
+    <div class="post-picture-wrapper">
+      <%= image_tag post.picture.url(:thumb) %>
+    </div>
+  <% end %>
+
+  <div class="main-body">
+    <h3 class="post-title"><%= link_to post.title, post %></h3>
+    <% if post.lead %>
+      <div class="post-body"><%= truncate(remove_javascript(post.lead), length: 150, separator: ' ', escape: false) %></div>
+      <%= link_to "Read more", post, class: 'read-more' %>
+    <% end %>
+  </div>
+
+  <div class="post-stats clearfix">
+    <div class="pull-left">
+      <%= render partial: 'posts/likes', locals: { post: post } %>
+    </div>
+
+    <div class="pull-right">
+      <%= render partial: 'posts/bookmarks', locals: { post: post } %>
+    </div>
+
+    <div class="response-count pull-right">
+      <% if post.responses_count > 0 %>
+        <%= link_to (pluralize(post.responses_count, "response")), post_path(post, anchor: 'responses'), class: 'response-count' %>
+      <% end %>
+    </div>
+  </div>
+</div>
