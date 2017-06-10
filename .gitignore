@@ -27,3 +27,4 @@ rails_best_practices_output.html
 .byebug_history
 .rspec
 brakeman.html
+dump.rdb
