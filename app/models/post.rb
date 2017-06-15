@@ -45,7 +45,7 @@ class Post < ActiveRecord::Base
 
   before_save :generate_lead!
   # will_pagination configuration
-  self.per_page = 5
+  self.per_page = 9
 
   include SearchablePost
 
