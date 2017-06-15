@@ -62,7 +62,7 @@ class Post < ActiveRecord::Base
     Tag.find_by!(name: name).posts
   end
 
-  def related_posts(size: 3)
+  def related_posts(size: 2)
     Post.joins(:taggings).where.not(id: self.id).where(taggings: { tag_id: self.tag_ids }).distinct.
       published.limit(size).includes(:user)
   end
