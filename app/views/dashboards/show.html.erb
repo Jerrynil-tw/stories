@@ -1,21 +1,16 @@
-<div class="col-md-6 col-md-offset-1 dashboard-main-content">
-
-  <% unless @dashboard.top_stories? %>
-    <div class="posts-wrapper" data-behavior="endless-scroll" data-animation="fadeInUp-fadeOutDown">
-      <%= render @dashboard.posts %>
-    </div>
-  <% else %>
-    <div class="posts-wrapper" data-animation="fadeInUp-fadeOutDown">
-      <%= render 'posts/top_stories', posts: @dashboard.posts %>
-    </div>
-  <% end %>
-
-  <% unless @dashboard.top_stories? %>
-    <div class="center">
-      <%= will_paginate @dashboard.posts %>
-    </div>
-  <% end %>
-
+<div class="col-md-10 col-md-offset-1 dashboard-main-content">
+  <div class="row">
+    <% @dashboard.posts.each do |post| %>
+      <div class="posts-wrapper col-md-4" data-animation="fadeInUp-fadeOutDown">
+        <%= render post %>
+        <br>
+      </div>
+    <% end %>
+  </div>
+  <br>  
+  <div class="center">
+    <%= will_paginate @dashboard.posts %>
+  </div>
 </div>
 
 <% if user_signed_in? %>

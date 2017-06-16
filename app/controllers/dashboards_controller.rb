@@ -7,7 +7,7 @@ class DashboardsController < ApplicationController
     if user_signed_in?
       @dashboard = Dashboard.new(user: current_user, posts: feed_posts)
     else
-      @dashboard = Dashboard.new(posts: featured_posts)
+      @dashboard = Dashboard.new(posts: all_posts)
     end
   end
 
@@ -51,6 +51,10 @@ class DashboardsController < ApplicationController
 
     def top_posts
       Post.published.top_stories(5).includes(:user)
+    end
+
+    def all_posts
+      Post.published.includes(:user).paginate(page: params[:page]).order(created_at: :desc)
     end
 
     def recent_posts
