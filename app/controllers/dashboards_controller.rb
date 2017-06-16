@@ -1,5 +1,6 @@
 class DashboardsController < ApplicationController
   before_action :check_for_admin, only: [:show]
+  before_action :activate_banner, only: [:show]
   before_action :authenticate_user!, only: [:bookmarks]
 
   def show
@@ -28,6 +29,10 @@ class DashboardsController < ApplicationController
       format.html { render :show }
       format.js   { render :show }
     end
+  end
+
+  def activate_banner
+    @activate_banner = true
   end
 
   private

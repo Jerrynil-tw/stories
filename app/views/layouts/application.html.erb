@@ -2,6 +2,20 @@
 <html ng-app="Stories">
 <head>
   <title>Stories</title>
+  <style type="text/css">
+    /*banner*/
+    #banner {
+      padding: 4em 0 6em 0;
+      background-image: url('<%= asset_path("Banner.jpg") %>');
+      background-size: cover;
+      background-position: top;
+      background-attachment: fixed;
+      /*background-repeat: no-repeat;*/
+      text-align: center;
+      /*border-top: 0.5em solid #5385c1;*/
+      max-height: 600px;
+    }  
+  </style>   
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,8 +23,8 @@
   <%= favicon_link_tag 'favicon.png', type: 'image/png' %>
   <%= favicon_link_tag 'stories-icon-apple-touch-180x180.png', rel: 'apple-touch-icon', type: 'image/png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
+<%= render 'layouts/overlay' unless user_signed_in? %>
 <body class="<%= controller.controller_name %> <%= controller.action_name %>">
   <%= render 'layouts/overlay' unless user_signed_in? %>
   <%= react_component('UserOverlay', {}) %>
@@ -19,6 +33,8 @@
 
   <% if admin_signed_in? %>
     <%= render 'layouts/admin_header' %>
+  <% elsif @activate_banner %>  
+    <%= render 'layouts/header_with_banner' %>
   <% else %>
     <%= render 'layouts/header' %>
   <% end %>
