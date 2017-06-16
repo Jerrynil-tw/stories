@@ -18,39 +18,41 @@
 
 </div>
 
-<% content_for :sidebar do %>
-  <aside class="col-md-4 main-sidebar">
-    <h4 class="small-heading border-top">Featured tags</h4>
-    <%= react_component('TagList', { tags: @dashboard.featured_tags }) %>
+<% if user_signed_in? %>
+  <% content_for :sidebar do %>
+    <aside class="col-md-4 main-sidebar">
+      <h4 class="small-heading border-top">Featured tags</h4>
+      <%= react_component('TagList', { tags: @dashboard.featured_tags }) %>
 
-    <% if user_signed_in? %>
-      <div class="flex-container border-top">
-        <h4 class="small-heading">Tags you follow</h4><%= react_component('AddTagButton') %>
-      </div>
-      <%= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
+      <% if user_signed_in? %>
+        <div class="flex-container border-top">
+          <h4 class="small-heading">Tags you follow</h4><%= react_component('AddTagButton') %>
+        </div>
+        <%= react_component('FollowingTagList', { followingTags: current_user.following_tags }) %>
 
-      <%= react_component('FollowSuggestionsContainer') %>
-    <% end %>
+        <%= react_component('FollowSuggestionsContainer') %>
+      <% end %>
 
-    <% unless @dashboard.filtered? %>
-      <h4 class="small-heading border-top">Top stories</h4>
-      <div class="sidebar-top-stories">
-        <ul>
-          <% @dashboard.top_stories.each_with_index do |post, index| %>
-            <li class="top-stories-list-item">
-              <div class="count-button-wrapper">
-                <span class="count-button"><%= index + 1 %></span>
-              </div>
-              <div class="top-stories-links">
-                <%= link_to post.title, post, class: 'post-title' %><br/>
-                <small>
-                  <%= react_component("PopoverLink", { user_id: post.user.id, url: user_path(post.user), children: post.username }) %>
-                </small>
-              </div>
-            </li>
-          <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </aside>
+      <% unless @dashboard.filtered? %>
+        <h4 class="small-heading border-top">Top stories</h4>
+        <div class="sidebar-top-stories">
+          <ul>
+            <% @dashboard.top_stories.each_with_index do |post, index| %>
+              <li class="top-stories-list-item">
+                <div class="count-button-wrapper">
+                  <span class="count-button"><%= index + 1 %></span>
+                </div>
+                <div class="top-stories-links">
+                  <%= link_to post.title, post, class: 'post-title' %><br/>
+                  <small>
+                    <%= react_component("PopoverLink", { user_id: post.user.id, url: user_path(post.user), children: post.username }) %>
+                  </small>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </aside>
+  <% end %>
 <% end %>
