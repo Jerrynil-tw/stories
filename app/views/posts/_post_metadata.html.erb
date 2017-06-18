@@ -1,7 +1,8 @@
 <div class="post-metadata">
   <%= avatar_for post.user, size: 40 %>
   <div class="post-info">
-    <%= react_component("PopoverLink", { user_id: post.user.id, url: user_path(post.user), children: post.username }) %>
+    <%= post.username %>
+    <br>
     <small>發佈於 <%= time_ago_in_words(post.created_at) %>前 </small>
   </div>
 </div>
