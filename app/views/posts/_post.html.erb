@@ -16,7 +16,7 @@
     <br>
     <% if post.lead %>
       <div class="post-body"><%= truncate(remove_javascript(post.lead), length: 150, separator: ' ', escape: false) %></div>
-      <%= link_to "Read more", post, class: 'read-more' %>
+      <%= link_to "繼續閱讀 ▶", post, class: 'read-more' %>
     <% end %>
   </div>
 
