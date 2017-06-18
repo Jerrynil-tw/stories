@@ -12,7 +12,7 @@
   font-size: 16px;
   letter-spacing: 1px;
   overflow: hidden;
-  background: $button-green;
+  background: #F39600;
   border-radius: 20px;
   text-shadow: 0 -0.5px 0 rgba(0, 0, 0, .1);
   transition: all .2s ease-in-out;
@@ -64,7 +64,7 @@
 
   &:hover {
     background-color: $white;
-    border: 1px solid $button-green;
+    border: 1px solid #F39600;
     em {
       right: -300%;
       transition-delay: 0;
@@ -72,9 +72,9 @@
 
     .fa {
       font-size: 16px !important;
-      color: $button-green;
+      color: #F39600;
       &:hover:not(.fa-share-alt) {
-        color: darken($button-green, 5%);
+        color: darken(#F39600, 5%);
       }
     }
 

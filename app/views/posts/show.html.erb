@@ -4,11 +4,6 @@
       <%= feature_post_button_for(@post) %>
     <% end %>
 
-    <div class="pull-right">
-      <%= render partial: 'posts/social_share', locals: { post: @post } %>
-    </div>
-    <%= render 'post_metadata', post: @post %>
-
     <% if @post.picture? %>
       <div class="post-picture-wrapper">
         <%= image_tag @post.picture.url(:thumb) %>
@@ -16,6 +11,8 @@
     <% end %>
 
     <h3 class="title"><%= @post.title %></h3>
+    <br>
+    <%= render 'post_metadata', post: @post %>
     <div class="body">
       <p><%= remove_javascript(@post.body).html_safe %></p>
     </div>
@@ -27,21 +24,11 @@
     </div>
 
     <div class="post-stats clearfix">
-      <div class="pull-left">
-        <%= render partial: 'posts/likes', locals: { post: @post } %>
-      </div>
-      <div class="pull-left">
-        <%= link_to post_path(@post, anchor: 'responses'), class: "response-icon-wrapper" do %>
-          <i class="fa fa-comment-o"></i>
-          <span class="response-count" data-behavior="response-count"><%= @post.responses_count %></span>
-        <% end %>
-      </div>
 
-      <div class="pull-right">
-        <%= render partial: 'posts/bookmarks', locals: { post: @post } %>
-      </div>
+        <%= render partial: 'posts/social_share', locals: { post: @post } %>
+
     </div>
-
+    <br>
     <div class="author-info">
       <div clas="author-metadata">
         <%= avatar_for @post.user, size: 50 %>
@@ -50,7 +37,6 @@
           <p><%= @post.user.description %></p>
         </div>
       </div>
-      <%= follow_button_for @post.user %>
     </div>
 
     <% if user_signed_in? && current_user?(@post.user) %>
