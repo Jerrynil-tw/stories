@@ -8,8 +8,8 @@
     <% end %>
   </div>
   <br>  
-  <div class="center">
-    <%= will_paginate @dashboard.posts %>
+  <div class="center pagin">
+    <%= will_paginate @dashboard.posts, renderer: BootstrapPagination::Rails%>
   </div>
 </div>
 
