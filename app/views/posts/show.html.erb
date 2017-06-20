@@ -16,17 +16,17 @@
       </div>
     <% end %>
 
+    <div class="post-tags">
+      <% @post.tags.each do |tag| %>
+        <%= link_to tag.name, tag, class: 'tag' %>
+      <% end %>
+    </div>
+
     <h3 class="title"><%= @post.title %></h3>
     <br>
     <%= render 'post_metadata', post: @post %>
     <div class="body">
       <p><%= remove_javascript(@post.body).html_safe %></p>
-    </div>
-
-    <div class="post-tags">
-      <% @post.tags.each do |tag| %>
-        <%= link_to tag.name, tag, class: 'tag' %>
-      <% end %>
     </div>
 
     <div class="post-stats clearfix">
