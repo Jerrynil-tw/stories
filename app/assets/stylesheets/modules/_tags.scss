@@ -7,17 +7,18 @@
 }
 
 a.tag {
-  color: $light-font-color;
+  color: #F4AD7D;
   background-color: #fff;
   padding: 0.5em 0.7em;
-  border: 1px solid $light-border-color;
+  border: 1px solid #F4AD7D;
   @include border-radius($radius);
   text-decoration: none;
   margin-right: 10px;
   margin-bottom: 12px;
-  font-size: 13px;
+  font-size: 14px;
   &:hover {
-    border-color: $border-hover-color;
-    color: #555;
+    background-color: #FCE9DD;
+    border-color: #F48D00;
+    color: #F48D00;
   }
 }

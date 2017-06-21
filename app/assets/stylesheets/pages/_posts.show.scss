@@ -39,17 +39,22 @@ body.posts.show {
 
   .tag {
     padding: 0.5em 1em;
-    background: $super-light-gray;
+    background: #fff;
     text-decoration: none;
     text-transform: capitalize;
-    color: rgba(0, 0, 0, 0.6);
-    font-size: 13px;
+    color: #F4AD7D;
+    font-size: 14px;
     @include border-radius($radius);
     margin-right: 8px;
     margin-bottom: 8px;
     &:last-child {
       margin-right: 0;
     }
+    &:hover {
+    background-color: #FCE9DD;
+    border-color: #F48D00;
+    color: #F48D00;
+  }
   }
   .main-content .post-stats {
     .fa {
