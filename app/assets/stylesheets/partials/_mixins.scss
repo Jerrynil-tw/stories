@@ -1,11 +1,12 @@
 // Control the reading expreience
 @mixin well-read {
   font-family: $reading-stack;
-  font-size: 20px;
-  line-height: 1.7;
+  font-size: 24px;
+  line-height: 1.9;
   font-weight: 300;
   border: none;
   color: $font-black;
+  text-align: justify;
 }
 
 // Border Radius with vendor prefixes for older browsers

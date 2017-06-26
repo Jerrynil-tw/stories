@@ -1,0 +1,41 @@
+Searching 3083 files for "well-read"
+
+/Users/JerryNil/Documents/ditstartup/stories/app/assets/stylesheets/modules/_editor_form.scss:
+   16      min-height: 300px;
+   17      outline: none;
+   18:     @include well-read;
+   19      line-height: 1.5;
+   20      position: relative;
+
+/Users/JerryNil/Documents/ditstartup/stories/app/assets/stylesheets/modules/_inline_editor.scss:
+   15    .medium-editable {
+   16      outline: none;
+   17:     @include well-read;
+   18      line-height: 1.5;
+   19      padding: 0;
+
+/Users/JerryNil/Documents/ditstartup/stories/app/assets/stylesheets/modules/_post_panel.scss:
+   32  
+   33        p {
+   34:         @include well-read;
+   35        }
+   36  
+   37        h2, h3 {
+   38:         @include well-read;
+   39          font-size: 22px;
+   40          color: $light-gray;
+
+/Users/JerryNil/Documents/ditstartup/stories/app/assets/stylesheets/pages/_posts.show.scss:
+   31  
+   32    .body {
+   33:     @include well-read;
+   34    }
+   35  
+
+/Users/JerryNil/Documents/ditstartup/stories/app/assets/stylesheets/partials/_mixins.scss:
+    1  // Control the reading expreience
+    2: @mixin well-read {
+    3    font-family: $reading-stack;
+    4    font-size: 20px;
+
+6 matches across 5 files
