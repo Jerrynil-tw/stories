@@ -52,12 +52,19 @@ nav.navbar {
     margin-left: 9px;
     li > a {
       text-decoration: none;
-      font-size: 14px;
-      color: $light-font-color;
-      font-weight: 400;
+      font-size: 15px;
+      color: #F4AD7D;
+      font-weight: 500;
       &.active {
-        color: $font-black;
+        color: #F48C00;
       }
+    }
+  }
+
+  .filter-links {
+    margin-left: 9px;
+    li > a:hover{
+      color: #F48C00;
     }
   }
 
@@ -178,7 +185,7 @@ nav.navbar {
     }
     img {
       top: 5px;
-      height: 31px;
+      height: 40px;
     }
     span {
       right: 0;
