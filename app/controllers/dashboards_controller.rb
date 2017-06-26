@@ -54,7 +54,7 @@ class DashboardsController < ApplicationController
     end
 
     def all_posts
-      Post.published.includes(:user).paginate(page: params[:page]).order(created_at: :desc)
+      Post.published.includes(:user, :tags).paginate(page: params[:page]).order(created_at: :desc)
     end
 
     def recent_posts
