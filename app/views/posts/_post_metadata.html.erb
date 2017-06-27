@@ -3,6 +3,14 @@
   <div class="post-info">
     <%= post.username %>
     <br>
-    <small>發佈於 <%= time_ago_in_words(post.created_at) %>前 </small>
+      <% if post.created_at.to_date == Time.now.to_date %> 
+        <medium>
+          發佈於 <%= time_ago_in_words(post.created_at) %>前 
+        </medium>
+      <% else %>
+        <medium>
+          發佈於 <%= post.created_at.to_date %> 
+        </medium>  
+      <% end %>
   </div>
 </div>
