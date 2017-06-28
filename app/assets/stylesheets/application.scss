@@ -65,6 +65,7 @@
 @import 'modules/follow_suggestions';
 @import 'modules/social_share';
 
+//pagination
 .pagination li a {
   color: white;
   background-color: #686868;
@@ -96,6 +97,11 @@
 
 .pagination > .disabled {
   display: none ;
+}
+
+//footer
+.open-box {
+  display: none;
 }
 
 // Vendor
