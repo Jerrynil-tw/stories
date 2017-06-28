@@ -14,6 +14,6 @@
   </div>
   <br>
   <div class="center pagin">
-    <%= will_paginate @dashboard.posts, renderer: BootstrapPagination::Rails %>
+    <%= will_paginate @dashboard.posts, renderer: BootstrapPagination::Rails, :previous_label => '◀ 上一頁', :next_label => '下一頁 ▶'%>
   </div>
 </div>
