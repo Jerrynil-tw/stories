@@ -93,6 +93,11 @@
   border: none;
   cursor: default;
 }
+
+.pagination > .disabled {
+  display: none ;
+}
+
 // Vendor
 @import 'vendor/medium-editor';
 @import 'vendor/medium-editor-insert-plugin';
