@@ -28,9 +28,20 @@
                   </span>
                 </a>
               </div>
-              <div class="icon col-xs-4 col-lg-6">
-                <a href="#">
-                  <i class="glyphicon glyphicon-envelope fa-inverse fa-4x"></i>
+              <div class="closed-mail icon col-xs-4 col-lg-6">
+                <a a href="mailto:service@ditstartup.com">
+                  <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+                    <i class="fa fa-envelope fa-stack-1x" style="color: black"></i>
+                  </span>
+                </a>
+              </div>
+              <div class="open-mail icon col-xs-4 col-lg-6">
+                <a a href="mailto:service@ditstartup.com">
+                  <span class="fa-stack fa-2x">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #F48C00"></i>
+                    <i class="fa fa-envelope fa-stack-1x" style="color: white"></i>
+                  </span>
                 </a>
               </div>
             </div>
@@ -100,6 +111,20 @@
       $(".open-stack").mouseout(function() {
         $(".closed-stack").show();
         $(".open-stack").hide();
+        $(this).hide();
+      });
+    });
+    $(document).ready(function() {
+
+      $(".closed-mail").mouseenter(function() {
+          $(".open-mail").show();
+          $(".closed-mail").hide();
+          $(this).hide();
+      });
+
+      $(".open-mail").mouseout(function() {
+        $(".closed-mail").show();
+        $(".open-mail").hide();
         $(this).hide();
       });
     });
