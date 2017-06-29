@@ -29,7 +29,7 @@ var Editor = {
 
     // preload tags if its edit.
     var tag_string = $('[data-behavior="tags"]').data("tags");
-    var tags = tag_string.length > 0 ? tag_string.split(', ') : ['Story', 'Music'];
+    var tags = tag_string.length > 0 ? tag_string.split(', ') : ['最新消息', '熱門文章', '團隊介紹'];
 
     var my_taggle = new Taggle('js-taggle', {
       duplicateTagClass: 'bounce',
