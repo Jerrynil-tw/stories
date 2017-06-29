@@ -6,13 +6,7 @@
       <% end %>
     </div>
     <ul class="nav navbar-nav filter-links">
-      <li>
-        <% if user_signed_in? %>
-          <%= nav_link_to "最新消息", tag_path(id:6) %>
-        <% else %>
-          <%= nav_link_to "最新消息", tag_path(id:6) %>
-        <% end %>
-      </li>
+      <li><%= nav_link_to "最新消息", tag_path(id:6) %></li>
       <li><%= nav_link_to "熱門文章", tag_path(id:7) %></li>
       <li><%= nav_link_to "團隊介紹", tag_path(id:8) %></li>
     </ul>
