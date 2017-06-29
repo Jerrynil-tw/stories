@@ -21,9 +21,6 @@
       <ul class="nav navbar-nav navbar-right">
         <% if user_signed_in? %>
           <li class="new-post-button"><%= link_to "Write a story", new_post_path, class: "button" %></li>
-          <li id="notifications">
-            <%= react_component('NotificationsContainer', {}) %>
-          </li>
           <%= render 'layouts/avatar_dropdown' %>
         <% end %>
       </ul>
