@@ -94,12 +94,13 @@ nav.navbar {
   }
   .new-post-button a {
     transition: all .1s;
-    color: $light-gray;
+    color: white;
+    border-color: white;
   }
   .new-post-button:hover {
     a {
-      color: $light-font-color;
-      border-color: $border-hover-color;
+      color: #F48C00;
+      border-color: #F48C00;
     }
   }
   .new-post-button,
