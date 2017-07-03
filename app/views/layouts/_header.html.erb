@@ -1,11 +1,11 @@
-<nav data-behavior="animated-navbar" class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid col-md-10 col-md-offset-1">
-    <div class="navbar-header col-xs-12">
+<nav data-behavior="animated-navbar" class="navbar navbar-default navbar-fixed-top container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <div class="navbar-header">
       <%= link_to root_path, class: "navbar-brand", id: "logo" do %>
         <%= image_tag 'Blog_LOGO.png', type: 'image/png' %>
       <% end %>
     </div>
-    <ul class="nav navbar-nav filter-links col-xs-12">
+    <ul class="nav navbar-nav filter-links">
       <li><%= nav_link_to "最新消息", tag_path(id:6) %></li>
       <li><%= nav_link_to "熱門文章", tag_path(id:7) %></li>
       <li><%= nav_link_to "團隊介紹", tag_path(id:8) %></li>
