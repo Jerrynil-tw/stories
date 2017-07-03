@@ -133,7 +133,7 @@
   <meta name="turbolinks-cache-control" content="no-cache">
 </head>
 <%= render 'layouts/overlay' unless user_signed_in? %>
-<body class="<%= controller.controller_name %> <%= controller.action_name %>">
+<body class="<%= controller.controller_name %> <%= controller.action_name %> col-xs-12">
   <%= render 'layouts/overlay' unless user_signed_in? %>
   <%= react_component('UserOverlay', {}) %>
 

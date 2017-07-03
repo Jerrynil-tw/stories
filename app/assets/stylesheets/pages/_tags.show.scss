@@ -1,3 +1,17 @@
+body.tags.show {
+  .main-container {
+    background: $background-gray;
+  }
+  .posts-wrapper > .post-panel {
+    background: $white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0,0,0, 0.09);
+    @include box-shadow;
+    @include border-radius($radius);
+  }
+}
+
 .heading-container {
   margin: 35px 0 20px;
   padding-bottom: 35px;
