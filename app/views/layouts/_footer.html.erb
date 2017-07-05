@@ -48,7 +48,18 @@
           </div>    
         </div>
         <div class="col-xs-12 col-lg-6" style="float: right;">
-          <section class="home-newsletter">
+          <section class="home-newsletter open-deliver">
+            <div class="single">
+              <div class="input-group">
+                  <div class="input-group-addon">追蹤我們</div>
+                <input type="text" class="form-control" placeholder="請輸入 email">
+                <span class="input-group-btn">
+                  <button class="btn btn-secondary" type="button" style="background-color: #F48C00">送出</button>
+                </span>
+              </div>
+            </div>
+          </section>
+          <section class="home-newsletter closed-deliver">
             <div class="single">
               <div class="input-group">
                   <div class="input-group-addon">追蹤我們</div>
@@ -125,6 +136,20 @@
       $(".open-mail").mouseout(function() {
         $(".closed-mail").show();
         $(".open-mail").hide();
+        $(this).hide();
+      });
+    });
+    $(document).ready(function() {
+
+      $(".closed-deliver").mouseenter(function() {
+          $(".open-deliver").show();
+          $(".closed-deliver").hide();
+          $(this).hide();
+      });
+
+      $(".open-deliver").mouseout(function() {
+        $(".closed-deliver").show();
+        $(".open-deliver").hide();
         $(this).hide();
       });
     });
