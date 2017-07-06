@@ -23,7 +23,7 @@
     </div>
 
     <h3 class="title"><%= @post.title %></h3>
-    <br>
+
     <%= render 'post_metadata', post: @post %>
     <div class="body">
       <p><%= remove_javascript(@post.body).html_safe %></p>
