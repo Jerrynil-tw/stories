@@ -27,6 +27,7 @@ gem 'jquery-ui-rails', '~> 5.0'
 gem 'jbuilder', '~> 2.0'
 
 gem 'friendly_id', '~> 5.1'
+gem 'babosa'
 
 # Image upload
 gem 'carrierwave', '0.10.0'

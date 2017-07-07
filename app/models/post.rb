@@ -52,6 +52,10 @@ class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: [ :slugged, :history, :finders ]
 
+  def normalize_friendly_id(input)
+    input.to_s.to_slug.normalize.to_s
+  end
+
   def self.new_draft_for(user)
     post = self.new(user_id: user.id)
     post.save_as_draft

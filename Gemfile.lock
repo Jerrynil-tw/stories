@@ -49,6 +49,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    babosa (1.0.2)
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -527,6 +528,7 @@ DEPENDENCIES
   annotate
   autoprefixer-rails (~> 6.3)
   awesome_print (~> 1.6)
+  babosa
   bonsai-elasticsearch-rails
   bootstrap-sass (~> 3.3.6)
   bullet (~> 5.0)
