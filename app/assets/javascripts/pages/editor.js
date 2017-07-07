@@ -6,6 +6,7 @@ var Editor = {
     }
 
     var editor = new MediumEditor('.medium-editable', {
+      targetBlank: true,
       placeholder: {
         text: "Tell your Story ..."
       }
