@@ -1,6 +1,5 @@
 <% content_for :head do %>
-  <meta property="og:description" content="<%= strip_tags(@post.lead) %>" />
-  <meta property="og:site_name"  content="Ditblog" />
+  <meta property="og:description" content="<%= strip_tags(@post.lead.truncate(100)) %>" />
   <meta property="fb:app_id" content="443470149342900
 " />
 <% end %>
