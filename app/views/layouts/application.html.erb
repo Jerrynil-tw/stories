@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="Stories" prefix='og: http://ogp.me/ns#'>
+<html ng-app="Ditblog" prefix='og: http://ogp.me/ns#' lang="zh">
 <head>
   <title>Ditblog</title>
   <style type="text/css">
@@ -131,6 +131,7 @@
   <%= favicon_link_tag 'stories-icon-apple-touch-180x180.png', rel: 'apple-touch-icon', type: 'image/png' %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="turbolinks-cache-control" content="no-cache">
+  <%= yield :head %>
 </head>
 <%= render 'layouts/overlay' unless user_signed_in? %>
 <body class="<%= controller.controller_name %> <%= controller.action_name %>">

@@ -1,3 +1,10 @@
+<% content_for :head do %>
+  <meta property="og:description" content="<%= strip_tags(@post.lead) %>" />
+  <meta property="og:site_name"  content="Ditblog" />
+  <meta property="fb:app_id" content="443470149342900
+" />
+<% end %>
+
 <div class="row" data-animation="fadeInUp-fadeOutDown">
   <div id="main-post" class="col-xs-10 col-md-6 col-lg-5 col-center col-xs-offset-1 col-sm-10 col-sm-offset-1 main-content">
     <% if user_signed_in? && current_user?(@post.user) %>
