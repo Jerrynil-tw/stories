@@ -6,7 +6,7 @@
   }
 
   .post-picture-wrapper {
-    padding: 1.2em 0 0;
+    padding: 0 0;
     img {
       display: block;
       width: 100%;
@@ -22,13 +22,18 @@
       font-weight: 700;
       font-size: 29px;
       letter-spacing: -.022em;
-      line-height: 1.25;
+      line-height: 1.15;
     }
 
     .post-body {
-      font-size: 21px;
-      line-height: 1.18;
       letter-spacing: -.022em;
+      font-family: $reading-stack;
+      font-size: 20px;
+      line-height: 1.45;
+      font-weight: 300;
+      border: none;
+      color: $font-black;
+      text-align: justify;
 
       p {
         @include well-read;
@@ -45,8 +50,8 @@
       display: block;
       text-decoration: none;
       color: #F2B990;
-      font-size: 22px;
-      margin-top: 16px;
+      font-size: 18px;
+      margin-top: 10px;
       &:hover {
         color: #F58B00;
       }

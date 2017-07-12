@@ -10,20 +10,20 @@
   <% end %>
 
   <div class="main-body">
-    <h3 class="post-title"><%= link_to post.title, post %></h3>
-    <br>
-    <div class="post-tags">
+    <h3 class="post-title" style="padding-bottom: 3px"><%= link_to post.title, post %></h3>
+
+    <div class="post-tags" style="padding-top: 10px">
       <% post.tags.each do |tag| %>
         <%= link_to tag.name, tag, class: 'tag' %>
       <% end %>
     </div>
     <br>
-    <br>
+
 
     <%= render partial: 'posts/post_metadata', locals: { post: post } %>
     <br>
     <% if post.lead %>
-      <div class="post-body"><%= truncate(remove_javascript(post.lead), length: 150, separator: ' ', escape: false) %></div>
+      <div class="post-body" style="padding-top: 10px;"><%= post.lead.truncate(100).gsub(/<\/?[^>]*>/, "") %></div>
       <%= link_to "繼續閱讀", post, class: 'read-more' %>
     <% end %>
   </div>
