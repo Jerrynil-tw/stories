@@ -21,7 +21,7 @@
 
 
     <%= render partial: 'posts/post_metadata', locals: { post: post } %>
-    <br>
+
     <% if post.lead %>
       <div class="post-body" style="padding-top: 10px;"><%= post.lead.truncate(100).gsub(/<\/?[^>]*>/, "") %></div>
       <%= link_to "繼續閱讀", post, class: 'read-more' %>
