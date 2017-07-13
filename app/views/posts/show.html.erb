@@ -37,12 +37,8 @@
       <p><%= remove_javascript(@post.body).html_safe %></p>
     </div>
 
-    <div class="post-stats clearfix">
+      <a class="fa fa-facebook-official" target="_blank" href="http://www.facebook.com/sharer.php?u=<%= post_url(@post) %>" style="font-size: 20px" >分享到臉書</a>
 
-        <%= render partial: 'posts/social_share', locals: { post: @post } %>
-
-    </div>
-    <br>
     <div class="author-info">
       <div clas="author-metadata">
         <%= avatar_for @post.user, size: 50 %>
