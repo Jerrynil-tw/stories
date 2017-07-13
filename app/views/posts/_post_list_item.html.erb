@@ -2,11 +2,14 @@
   <div class="flex-container col-xs-12 col-md-6">
     <div class="avatar-wrapper">
       <%= avatar_for(post.user, size: 40) %>
+      <small class="pli-username">
+        <%=link_to post.username, post.user %>
+      </small>
     </div>
     <div class="post-info">
       <h3 class="small-heading">相關文章</h3>
       <strong class="pli-title"><%= link_to post.title, post %></strong><br/>
-      <small class="pli-username"><%=link_to post.username, post.user %></small>
+      
     </div>
   </div>
 
