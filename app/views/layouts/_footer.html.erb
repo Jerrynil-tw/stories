@@ -1,5 +1,25 @@
 <style type="text/css">
   #mc_embed_signup{background:#050608; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+  .fa-envelope {
+    color: black;
+  }
+  
+  .fa-facebook {
+    color: black;
+  }
+
+  .envelope:hover .fa-envelope {
+    color: white;
+  }
+  .envelope:hover .fa-circle {
+    color: #F48C00;
+  }
+  .facebook:hover .fa-facebook {
+    color: white;
+  }
+  .facebook:hover .fa-circle {
+    color: #324D8F;
+  }
 </style>
 
 <footer class="footer-basic-centered">
@@ -7,44 +27,26 @@
     <div class="row">
       <div class="col-xs-12 col-lg-6" style="padding-top: 80px;">
         <div class="col-xs-4 col-lg-5" style="float: left;">
-          <div class="closed-box"> 
-            <%= link_to image_tag("DIT_LOGO.png", style: "width:120px"), "https://www.ditstartup.com", target: "_blank" %>
-          </div>
+            <%= link_to image_tag("DIT_LOGO.png", style: "width:120px"), "https://www.ditstartup.com", target: "_blank", class: "closed-box"%>
           <div class="open-box"> 
             <%= link_to image_tag("dit_logo_blue.png", style: "width:120px"), "https://www.ditstartup.com", target: "_blank" %>
           </div>
         </div>
         <div class="col-xs-8 col-lg-7" style="padding: 5px 40px;">
           <div class="row">
-            <div class="closed-stack icon col-xs-4 col-lg-6" style="padding-left: 40px;">
+            <div class="icon col-xs-4 col-lg-6" style="padding-left: 40px;">
               <a target="_blank" href="https://www.facebook.com/ditstartup/">
-              <span class="fa-stack fa-2x">
+              <span class="fa-stack fa-2x facebook">
                 <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
-                <i class="fa fa-facebook fa-stack-1x" style="color: black"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
                 </a>
               </span>
             </div>
-            <div class="open-stack icon col-xs-4 col-lg-6" style="padding-left: 40px;">
-              <a target="_blank" href="https://www.facebook.com/ditstartup/">
-                <span class="fa-stack fa-2x">
-                  <i class="fa fa-circle fa-stack-2x"></i>
-                  <i class="fa fa-facebook fa-stack-1x" style="color: white"></i>
-                </span>
-              </a>
-            </div>
-            <div class="closed-mail icon col-xs-4 col-lg-6"  style="padding-left: 60px;">
+            <div class="icon col-xs-4 col-lg-6"  style="padding-left: 60px;">
               <a href="mailto:service@ditstartup.com">
-                <span class="fa-stack fa-2x">
-                  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                  <i class="fa fa-envelope fa-stack-1x" style="color: black;"></i>
-                </span>
-              </a>
-            </div>
-            <div class="open-mail icon col-xs-4 col-lg-6" style="padding-left: 60px;">
-              <a href="mailto:service@ditstartup.com">
-                <span class="fa-stack fa-2x">
-                  <i class="fa fa-circle fa-stack-2x" style="color: #F48C00"></i>
-                  <i class="fa fa-envelope fa-stack-1x" style="color: white;"></i>
+                <span class="fa-stack fa-2x envelope">
+                  <i class="fa fa-circle fa-stack-2x fa-inverse circle"></i>
+                  <i class="fa fa-envelope fa-stack-1x"></i>
                 </span>
               </a>
             </div>
@@ -130,34 +132,6 @@
       $(".open-box").mouseout(function() {
         $(".closed-box").show();
         $(".open-box").hide();
-        $(this).hide();
-      });
-    });
-    $(document).ready(function() {
-
-      $(".closed-stack").mouseenter(function() {
-          $(".open-stack").show();
-          $(".closed-stack").hide();
-          $(this).hide();
-      });
-
-      $(".open-stack").mouseout(function() {
-        $(".closed-stack").show();
-        $(".open-stack").hide();
-        $(this).hide();
-      });
-    });
-    $(document).ready(function() {
-
-      $(".closed-mail").mouseenter(function() {
-          $(".open-mail").show();
-          $(".closed-mail").hide();
-          $(this).hide();
-      });
-
-      $(".open-mail").mouseout(function() {
-        $(".closed-mail").show();
-        $(".open-mail").hide();
         $(this).hide();
       });
     });
