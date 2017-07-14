@@ -21,16 +21,113 @@
     color: #324D8F;
   }
 
-  //xs
-  @media screen and (max-width:767px){
-    .fb_icon {
-      padding-left: 60px;
-    }
-    .envelope_icon {
-      padding-left: 40px;
-    }
+  /*footer*/
+  .footer-basic-centered{
+    background-color: #050608;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    /*font: normal 18px sans-serif;*/
+
+    padding: 45px;
+/*    margin-top: 60px;*/
   }
 
+  .footer-basic-centered .footer-company-motto{
+    color:  #8d9093;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .footer-basic-centered .footer-company-name{
+    color:  #8f9296;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .footer-basic-centered .footer-links{
+    list-style: none;
+    font-weight: bold;
+    color:  #ffffff;
+    padding: 35px 0 23px;
+    margin: 0;
+  }
+
+  .footer-basic-centered .footer-links a{
+    display:inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+  .home-newsletter {
+      padding: 80px 0;
+/*        background: #f84e77;*/
+    }
+
+    .home-newsletter .single {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 2; }
+    .home-newsletter .single h2 {
+      font-size: 44px;
+      color: white;
+      text-transform: uppercase;
+      margin-bottom: 40px; }
+    .home-newsletter .single .form-control {
+      padding-left: 20px;
+      height: 60px;
+      font-size: 22px;
+      background: white;
+      border-color: transparent;
+      border-radius: 15px 0 0 15px; }
+    .home-newsletter .single .form-control:focus {
+      box-shadow: none;
+      border-color: #243c4f; }
+    .home-newsletter .single .btn {
+      min-height: 60px;
+      min-width: 100px;
+      border-color:white; 
+      border-radius: 0 15px 15px 0;
+      background: #000000;
+      color: #fff;
+      font-size: 22px;
+    }
+    .home-newsletter .single .input-group-addon{
+      min-height: 60px;
+      min-width: 100px;
+      border-color:white; 
+      border-radius: 15px 0 0 15px;
+      background: #000000;
+      color: #fff;
+      font-size: 22px;
+    }
+  /* If you don't want the footer to be responsive, remove these media queries */
+
+  @media (max-width: 600px) {
+
+    .footer-basic-centered{
+      padding: 35px;
+    }
+
+    .footer-basic-centered .footer-company-motto{
+      font-size: 18px;
+    }
+
+    .footer-basic-centered .footer-company-name{
+      font-size: 12px;
+    }
+
+    .footer-basic-centered .footer-links{
+      font-size: 14px;
+      padding: 25px 0 20px;
+    }
+
+    .footer-basic-centered .footer-links a{
+      line-height: 1.8;
+    }
+  }
 
 </style>
 
@@ -40,13 +137,13 @@
       <div class="row">
         <div class="logo col-xs-4 col-lg-4">
           <div class="closed-box"> 
-            <%= link_to image_tag("DIT_LOGO.png", style: "width:120px"), "https://www.ditstartup.com", target: "_blank" %>
+            <%= link_to image_tag("DIT_LOGO.png", style: "width: 100px"), "https://www.ditstartup.com", target: "_blank" %>
           </div>
           <div class="open-box"> 
-            <%= link_to image_tag("dit_logo_blue.png", style: "width:120px"), "https://www.ditstartup.com", target: "_blank" %>
+            <%= link_to image_tag("dit_logo_blue.png", style: "width: 100px"), "https://www.ditstartup.com", target: "_blank" %>
           </div>
         </div>
-        <div class="fb_icon col-xs-4 col-lg-4">
+        <div class="fb_icon col-xs-4 col-lg-4" style="padding-left: 40px">
           <a target="_blank" href="https://www.facebook.com/ditstartup/">
           <span class="fa-stack fa-2x facebook">
             <i class="fa fa-circle fa-inverse fa-stack-2x"></i>
