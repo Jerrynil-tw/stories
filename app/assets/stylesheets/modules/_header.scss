@@ -49,10 +49,10 @@ nav.navbar {
     height: 40px;
   }
   .filter-links {
-    margin-left: 9px;
+    margin-left: 0px;
     li > a {
       text-decoration: none;
-      font-size: 22px;
+      font-size: 21px;
       color: white;
       font-weight: 500;
       &.active {
@@ -62,7 +62,6 @@ nav.navbar {
   }
 
   .filter-links {
-    margin-left: 0px;
     li > a:hover{
       color: #F48C00;
     }
