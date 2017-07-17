@@ -37,10 +37,22 @@
       <p><%= remove_javascript(@post.body).html_safe %></p>
     </div>
 
-      <a class="fa fa-facebook-official" target="_blank" href="http://www.facebook.com/sharer.php?u=<%= post_url(@post) %>" style="font-size: 20px; text-decoration: none;" >分享到臉書</a>
+      <div class="icon">
+        <a target="_blank" href="http://www.facebook.com/sharer.php?u=<%= post_url(@post) %>" style="font-size: 18px; text-decoration: none;" >
+          <span class="fa-stack fa-1x facebook">
+            <i class="fa fa-square fa-stack-2x"></i>
+            <i class="fa fa-facebook fa-stack-1x" style="color:white"></i>
+          </span>
+          分享到 Facebook
+        </a>
+      </div>
+
+
+
+
 
     <div class="author-info">
-      <div clas="author-metadata">
+      <div class="author-metadata">
         <%= avatar_for @post.user, size: 50 %>
         <div class="username-description">
           <h4><%= @post.user.username %></h4>
@@ -49,7 +61,7 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
 
 <div class="post-show-footer row" data-animation="fadeInUp-fadeOutDown">
   <% if @related_posts.any? %>
