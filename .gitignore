@@ -30,3 +30,4 @@ brakeman.html
 dump.rdb
 config/database.yml
 config/secrets.yml
+config/application.yml
