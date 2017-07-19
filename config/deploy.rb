@@ -4,6 +4,10 @@ lock "3.8.2"
 set :application, "stories"
 set :repo_url, "git@github.com:Jerrynil-tw/stories.git"
 
+`ssh-add`
+set :ssh_options, {
+  forward_agent: true
+}
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
