@@ -33,6 +33,7 @@ gem 'babosa'
 gem 'carrierwave', '0.10.0'
 gem 'mini_magick', '3.8.0'
 gem 'fog',  '1.38.0'
+gem 'fog-aws', '~> 1.4'
 gem 'net-ssh'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
