@@ -575,7 +575,6 @@ DEPENDENCIES
   factory_girl_rails (~> 4.5.0)
   faker (~> 1.6.1)
   fog (= 1.38.0)
-  fog-aws (~> 1.4)
   font-awesome-sass (~> 4.5)
   friendly_id (~> 5.1)
   guard-rspec
