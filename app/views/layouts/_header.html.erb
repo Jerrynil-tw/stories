@@ -6,9 +6,9 @@
       <% end %>
     </div>
     <ul class="nav navbar-nav filter-links">
-      <li><%= nav_link_to "最新消息", tag_path(Tag.find_by_name("最新消息").id) %></li>
-      <li><%= nav_link_to "熱門文章", tag_path(Tag.find_by_name("熱門文章").id) %></li>
-      <li><%= nav_link_to "團隊介紹", tag_path(Tag.find_by_name("團隊介紹").id) %></li>
+      <li><%= nav_link_to "最新消息", tag_path(id:1) %></li>
+      <li><%= nav_link_to "熱門文章", tag_path(id:2) %></li>
+      <li><%= nav_link_to "團隊介紹", tag_path(id:3) %></li>
     </ul>
 
     <div class="folding-nav">
